@@ -1,8 +1,8 @@
 
              PGM        PARM(&A &B)
              DCLF       FILE(EMP)
-             DCL        VAR(&A) TYPE(*CHAR) LEN(2)
-             DCL        VAR(&B) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&A1) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&B1) TYPE(*CHAR) LEN(2)
              DCL        VAR(&C1) TYPE(*DEC) LEN(2)
              DCL        VAR(&D) TYPE(*DEC) LEN(2)
              DCL        VAR(&E) TYPE(*DEC) LEN(4)
