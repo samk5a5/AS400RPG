@@ -1,0 +1,28 @@
+
+             PGM        PARM(&A &B)
+             DCLF       FILE(EMP)
+             DCL        VAR(&A) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&B) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&C) TYPE(*DEC) LEN(2)
+             DCL        VAR(&D) TYPE(*DEC) LEN(2)
+             DCL        VAR(&E) TYPE(*DEC) LEN(4)
+             DCL        VAR(&F) TYPE(*CHAR) LEN(4)
+             MONMSG     MSGID(CPF9999) EXEC(GOTO CMDLBL(END))
+             CHGVAR     VAR(&C) VALUE(%dec(&a))
+             CHGVAR     VAR(&D) VALUE(%dec(&b))
+
+             DOWHILE    COND(1 = 1)
+             RCVF       RCDFMT(EMPR)
+             SNDPGMMSG  MSG(&ENAME)
+             ENDDO
+             CHGVAR     VAR(&E) VALUE(&C /&D)
+             CHGVAR     VAR(&F) VALUE(%char(&E))
+             SNDPGMMSG  MSG(&F)
+
+
+
+
+
+     END:
+
+             ENDPGM
