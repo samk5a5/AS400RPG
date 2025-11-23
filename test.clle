@@ -8,7 +8,7 @@
              DCL        VAR(&E) TYPE(*DEC) LEN(4)
              DCL        VAR(&F) TYPE(*CHAR) LEN(4)
              MONMSG     MSGID(CPF9999) EXEC(GOTO CMDLBL(END))
-             CHGVAR     VAR(&C) VALUE(%dec(&a))
+             CHGVAR     VAR(&C) VALUE(%dec(&a)
              CHGVAR     VAR(&D) VALUE(%dec(&b))
 
              DOWHILE    COND(1 = 1)
